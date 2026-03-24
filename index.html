@@ -11,15 +11,29 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:#020617;color:#e2e8f0}
 
-nav{display:flex;justify-content:space-between;padding:15px 30px;background:#020617;border-bottom:1px solid #1e293b}
+/* NAV */
+nav{
+display:flex;justify-content:space-between;
+padding:15px 30px;background:#020617;
+border-bottom:1px solid #1e293b
+}
 nav a{color:#38bdf8;text-decoration:none;margin:0 10px}
 
+/* HERO */
 header{
 height:100vh;display:flex;flex-direction:column;
 justify-content:center;align-items:center;text-align:center;
 background:linear-gradient(#020617,#0f172a)
 }
-header h1{font-size:3rem}
+
+header img{
+width:140px;height:140px;
+border-radius:50%;
+border:3px solid #38bdf8;
+margin-bottom:15px;
+}
+
+header h1{font-size:2.8rem}
 header span{color:#38bdf8}
 
 .btn{
@@ -28,12 +42,27 @@ background:#38bdf8;color:#020617;
 border-radius:6px;text-decoration:none;font-weight:bold
 }
 
+/* SECTIONS */
 section{padding:60px 20px;max-width:1100px;margin:auto}
-h2{margin-bottom:20px;border-left:4px solid #38bdf8;padding-left:10px}
+
+h2{
+margin-bottom:20px;
+border-left:4px solid #38bdf8;
+padding-left:10px
+}
 
 .card{
-background:#020617;border:1px solid #1e293b;
-padding:20px;border-radius:10px;margin-bottom:20px
+background:#020617;
+border:1px solid #1e293b;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+transition:0.3s
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 15px rgba(56,189,248,0.3)
 }
 
 .grid{
@@ -42,31 +71,42 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px
 }
 
-footer{text-align:center;padding:20px;border-top:1px solid #1e293b}
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid #1e293b
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <h3>Angel M F</h3>
 <div>
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
-<a href="#education">Education</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
+<!-- HERO -->
 <header>
-<h1>Hi, I'm <span>Angel</span></h1>
-<p>IT Security Specialist | SOC | VAPT | Threat Intelligence</p>
 
-<a href="ADD_YOUR_RESUME_LINK_HERE" target="_blank" class="btn">
+<!-- ✅ YOUR IMAGE -->
+<img src="https://raw.githubusercontent.com/angelmariaflowerance/PORTFOLIO/main/1763125825080.jpg" alt="Profile">
+
+<h1>Hi, I'm <span>Angel</span></h1>
+<p>IT Security Specialist | SOC Operations | VAPT | Threat Intelligence</p>
+
+<!-- ✅ YOUR RESUME -->
+<a href="https://raw.githubusercontent.com/angelmariaflowerance/PORTFOLIO/main/it%20sec%20resume.pdf" target="_blank" class="btn">
 Download Resume
 </a>
+
 </header>
 
 <!-- ABOUT -->
@@ -74,53 +114,49 @@ Download Resume
 <h2>Professional Summary</h2>
 <div class="card">
 <p>
-IT Security Specialist with experience in SOC monitoring, VAPT, SIEM (Wazuh), and securing web applications and payment systems. Skilled in RBAC, IAM, incident response, fraud detection, and risk assessment aligned with MITRE ATT&CK, NIST, and ISO 27001 frameworks.
+IT Security Specialist with hands-on experience in SOC monitoring, VAPT, SIEM (Wazuh), and securing web applications and payment systems. Skilled in RBAC, IAM, incident response, fraud detection, and risk assessment aligned with MITRE ATT&CK, NIST, and ISO 27001 frameworks.
 </p>
 </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-<h2>Experience</h2>
+<h2>Professional Experience</h2>
 
 <div class="card">
 <h3>IT Security Specialist</h3>
-<p>Serah Travel & Tours (ApeiroTrip) | Dec 2025 – Present</p>
+<p>Serah Travel & Tours LLC Pvt Ltd (ApeiroTrip), Pathanamthitta | Dec 2025 – Present | On-site</p>
 <ul>
-<li>RBAC, IAM & backend security monitoring</li>
-<li>Payment security & fraud detection</li>
-<li>System monitoring & troubleshooting</li>
-<li>Risk assessment & incident response</li>
+<li>Managed access control, RBAC, and secure email configurations</li>
+<li>Handled backend administration and security monitoring for AI-powered B2C and B2B travel platforms</li>
+<li>Monitored system performance, booking flows, and transaction issues</li>
+<li>Oversaw payment gateway security and fraud detection</li>
+<li>Performed risk assessments for proactive threat mitigation</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Cybersecurity Analyst Intern (SOC)</h3>
+<h3>Cybersecurity Analyst Intern – SOC Operations</h3>
+<p>CyArt | Aug 2025 – Nov 2025 | Remote</p>
 <ul>
-<li>SIEM monitoring, alert triage, IOC analysis</li>
-<li>Threat intelligence & malware analysis</li>
+<li>Monitored SIEM, IDS/IPS, and firewall logs for threat detection</li>
+<li>Performed incident response, alert triage, log correlation, and IOC analysis</li>
+<li>Conducted phishing and malware analysis using MITRE ATT&CK</li>
+<li>Used OSINT and threat intelligence for investigations</li>
+<li>Supported security audits and compliance</li>
 </ul>
 </div>
 
 <div class="card">
 <h3>Cybersecurity Intern</h3>
+<p>Kerala Police Academy | Jan 2024 | On-site</p>
 <ul>
-<li>VAPT & penetration testing (15+ vulnerabilities)</li>
-<li>Tools: Nmap, Burp Suite, Wireshark</li>
+<li>Performed VAPT and penetration testing using Kali Linux (15+ vulnerabilities)</li>
+<li>Used Nmap, Burp Suite, Metasploit, OWASP ZAP</li>
+<li>Analyzed traffic with Wireshark and provided remediation reports</li>
 </ul>
 </div>
 
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-<h2>Education</h2>
-<div class="card">
-<h3>BSc Digital & Cyber Forensic Science</h3>
-<p>Bharathiar University | 2022 – 2025</p>
-<p>Percentage: 84%</p>
-<p>SOC Operations, VAPT, Ethical Hacking, Digital Forensics, Incident Response</p>
-</div>
 </section>
 
 <!-- SKILLS -->
@@ -130,32 +166,22 @@ IT Security Specialist with experience in SOC monitoring, VAPT, SIEM (Wazuh), an
 
 <div class="card">
 <h4>Security Operations</h4>
-<p>SIEM (Wazuh), Incident Response, Log Analysis, Threat Intelligence, IOC Detection</p>
+<p>SIEM (Wazuh), Incident Response, Log Analysis, Threat Intelligence</p>
 </div>
 
 <div class="card">
 <h4>Application Security</h4>
-<p>Web Security Testing, Payment Security, Fraud Detection</p>
+<p>VAPT, Web Security Testing, Payment Security, Fraud Detection</p>
 </div>
 
 <div class="card">
 <h4>Tools</h4>
-<p>Burp Suite, Nmap, Wireshark, Metasploit, OWASP ZAP, Nessus</p>
+<p>Burp Suite, Nmap, Wireshark, Metasploit, OWASP ZAP</p>
 </div>
 
 <div class="card">
-<h4>Networking & Systems</h4>
+<h4>Networking</h4>
 <p>TCP/IP, IDS/IPS, Firewalls, RBAC, IAM, TLS/SSL</p>
-</div>
-
-<div class="card">
-<h4>Digital Forensics</h4>
-<p>OSINT, Evidence Collection, File Analysis, Dark Web Monitoring</p>
-</div>
-
-<div class="card">
-<h4>Scripting</h4>
-<p>Python (Basic), Bash, PowerShell</p>
 </div>
 
 </div>
@@ -167,18 +193,18 @@ IT Security Specialist with experience in SOC monitoring, VAPT, SIEM (Wazuh), an
 <div class="grid">
 
 <div class="card">
-<h4>Secure IoT Bridge (Docker + TLS)</h4>
-<p>Implemented TLS 1.3 encryption for secure device communication and MITM prevention.</p>
+<h4>Secure IoT Bridge</h4>
+<p>Docker-based TLS 1.3 secure communication preventing MITM attacks</p>
 </div>
 
 <div class="card">
-<h4>Secure REST API (Node.js)</h4>
-<p>JWT authentication, rate limiting, input validation, OWASP security practices.</p>
+<h4>Secure REST API</h4>
+<p>JWT authentication, input validation, rate limiting (OWASP)</p>
 </div>
 
 <div class="card">
-<h4>Penetration Testing (Windows 7)</h4>
-<p>Identified vulnerabilities and provided remediation strategies.</p>
+<h4>Penetration Testing</h4>
+<p>Identified vulnerabilities and delivered remediation strategies</p>
 </div>
 
 </div>
@@ -196,7 +222,7 @@ IT Security Specialist with experience in SOC monitoring, VAPT, SIEM (Wazuh), an
 </section>
 
 <footer>
-<p>© 2026 Angel M F</p>
+<p>© 2026 Angel M F | Cybersecurity Portfolio</p>
 </footer>
 
 </body>
